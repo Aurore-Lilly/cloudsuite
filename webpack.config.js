@@ -2,10 +2,9 @@ const path = require('path');
 const TerserPlugin = require("terser-webpack-plugin");
 
 
-
 module.exports = {
 	
-	mode: 'none',
+	mode: 'development',
 	entry: './src/index.js',
 	output: {
 		filename: 'main.js',
@@ -34,6 +33,8 @@ module.exports = {
 				use: {
 				  loader: 'babel-loader',
 				  options: {
+				    cacheCompression: false,
+			   	    cacheDirectory: true,
 				    presets: ['@babel/preset-env']
 				  }
 				}
