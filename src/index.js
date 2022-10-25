@@ -18,11 +18,9 @@ dom.i2svg()
   const nav = document.querySelector('.nav')
   const target = document.querySelectorAll('.scroll');
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', (event) => {
     var top = window.scrollY;
-    const hero = document.getElementById('hero');
-    const title = document.getElementById('title');
-    const button = document.getElementById('button');
+  
 
     if (top >= 100){
       nav.classList.add('active')
