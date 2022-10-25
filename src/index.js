@@ -11,11 +11,11 @@ dom.i2svg();
 //target element to apply parallax effect to
 //determine amount of pixel to determine the rate at which it will scroll
 
-const nav = document.querySelector(".nav");
-const target = document.querySelectorAll(".scroll");
-
 window.addEventListener("scroll", (event) => {
-  var top = window.pageYOffset;
+
+  const nav = document.querySelector(".nav");
+  const target = document.querySelectorAll(".scroll");
+  const top = window.pageYOffset;
 
   if (top >= 100) {
     nav.classList.add("active");
